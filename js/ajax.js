@@ -1,6 +1,3 @@
-//Говорим, что создаем новый объект подключения
-
-
 function ajax(url, method, functionName, dataArray) {
     let xhttp = new XMLHttpRequest();
     xhttp.open(method, url, true);
