@@ -1,5 +1,3 @@
-// Не обращать внимание, это из фреймворка (поставили массив, чтобы заработал инстанс)
-
 document.addEventListener('DOMContentLoaded', function () {
     let elems = document.querySelectorAll('.datepicker');
     let instances = M.Datepicker.init(elems, {
@@ -12,8 +10,6 @@ document.addEventListener('DOMContentLoaded', function () {
 let userEmail = getCookie('email');
 console.log(userEmail);
 ajax('core/get_user_data.php', 'post', getUserData, { 'email': userEmail });
-
-// Готовый код по извлечению мейла пользователя, взят отсюда https://www.w3schools.com/js/js_cookies.asp
 
 function getCookie(cname) {
     let name = cname + "=";
@@ -30,8 +26,6 @@ function getCookie(cname) {
     }
     return "";
 }
-// Готовый код по извлечению мейла пользователя, взят отсюда https://www.w3schools.com/js/js_cookies.asp
-
 // Получаем данные залогиненного пользователя
 
 function getUserData(result) {
@@ -46,7 +40,7 @@ function getUserData(result) {
             sex[i].checked = true;
         }
     }
-    M.updateTextFields(); // Не обращать внимание, это из фреймворка
+    M.updateTextFields(); 
 }
 
 document.querySelector('#signup-submit').onclick = function (event) {
