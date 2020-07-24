@@ -20,7 +20,7 @@ document.querySelectorAll('.modal-wrap').forEach(function (element) {
 });
 
 function showModal() {
-    let modalId = this.dataset.modal; //Обращаемся к связанным по айди элементам (модал мы сами придумали название)
+    let modalId = this.dataset.modal; //Обращаемся к связанным по айди элементам
     document.querySelector(modalId).classList.remove('hide');
 
     document.onkeydown = function (event) {
